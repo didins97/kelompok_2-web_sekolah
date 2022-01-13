@@ -3,14 +3,14 @@
 ])
 @section('content')
 <!-- ##### Hero Area Start ##### -->
-<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('img/bg') }}/bg1.jpg);">
+<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('img/bg') }}/sklh.jpg);">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <!-- Hero Content -->
                 <div class="hero-content text-center">
-                    <h2>Selamat Datang di Laraschool</h2>
-                    <a href="#" class="btn clever-btn">Sekolah Elit</a>
+                    <h2>Selamat Datang di Sekolah Online</h2>
+                    <a href="#" class="btn clever-btn">Sekolah Modern</a>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
 <div class="regular-page-area section-padding-100 mt-5 mb-4">
     <div class="col-lg-9 mx-auto">
         <div class="card">
-            <div class="card-header">Laraschool</div>
+            <div class="card-header">Sekolah Online</div>
             <div class="card-body">
                 <p class="lead">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
