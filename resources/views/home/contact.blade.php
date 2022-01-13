@@ -33,7 +33,7 @@
             <div class="col-12 col-lg-6">
                 <div class="contact--info mt-50 mb-50">
                     <h4>Tulis Pesan</h4>
-                    <form method="POST" action="">
+                    <form method="POST" action="{{ route('contact.email')}}">
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="form-group">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="isi" id="message" cols="30" rows="5" placeholder="Pesan"></textarea>
+                                    <textarea class="form-control" name="pesan" id="pesan" cols="30" rows="5" placeholder="Pesan"></textarea>
                                     <small id="emailHelp" class="form-text text-muted">Maksimal kirim 5 kali dengan email yang sama</small>
                                     @error('isi')
                                         <div class="invalid-feedback">

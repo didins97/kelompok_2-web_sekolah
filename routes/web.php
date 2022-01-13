@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PengumumanController;
 
 /*
@@ -32,6 +33,7 @@ Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 
+
 //Artikel
 Route::get('/artikel',[ArtikelController::class,'index'])->name('artikel');
 Route::get('/artikel/search',[ArtikelController::class,'search'])->name('artikel.search');
@@ -45,6 +47,9 @@ Route::get('/pengumuman/{pengumuman:slug}',[PengumumanController::class,'show'])
 // Agenda
 Route::get('/agenda',[AgendaController::class,'index'])->name('agenda');
 // Route::get('/pengumuman/{pengumuman:slug}',[PengumumanController::class,'show'])->name('pengumuman.show');
+
+// pesan contact
+Route::post('/send',[ContactController::class,'create'])->name('contact.email');
 
 //Admin
 Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth']],function(){

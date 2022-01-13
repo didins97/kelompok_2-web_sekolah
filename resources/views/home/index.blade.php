@@ -58,14 +58,14 @@
                         <h4 class="event-title">{{ $pn->judul }}</h4>
                     </div>
                     <div>
-                        <a href="{{ route('pengumuman.show',$pn->slug) }}" class="btn btn-primary col-lg">Detail</a>
+                        <a href="" class="btn btn-primary col-lg">Detail</a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
         <div class="row">
-            <a href="{{ route('pengumuman') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Pengumuman</a>
+            <a href="{{ route('agenda') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Pengumuman</a>
         </div>
     </div>
 </section>
@@ -111,6 +111,56 @@
         </div>
         <div class="row mt-3">
             <a href="{{ route('artikel') }}" class="alert alert-success alert-link mx-auto mt-3">Lihat Semua Artikel</a>
+        </div>
+    </div>
+</section>
+@endif
+
+@if($agenda->count() > 0)
+<section class="upcoming-events section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h3>Agenda Terbaru</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach($agenda as $agn) 
+            {{-- <div class="col-12 col-md-6 col-lg-6">
+                <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="250ms">
+                    <!-- Events Thumb -->
+                    <div class="events-thumb">
+                        <img src="{{ asset('img/bg') }}/pengumuman.agng" alt="">
+                        <h6 class="event-date">{{ $agn->tgl }} | BY : {{ $agn->user->name }}</h6>
+                        <h4 class="event-title">{{ $agn->judul }}</h4>
+                    </div>
+                    <div>
+                        <a href="" class="btn btn-primary col-lg">Detail</a>
+                    </div>
+                </div>
+            </div> --}}
+
+            <div class="card text-center">
+                <div class="card-header">
+                    {{ $agn->tgl }} | BY : {{ $agn->user->name }}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ $agn->judul }}</h5>
+                  <p class="card-text">{!! Str::limit($agn->deskripsi, 50) !!}</p>
+                  <a href="#" class="btn btn-primary">Detail</a>
+                </div>
+                <div class="card-footer text-muted">
+                  2 days ago
+                </div>
+            </div>
+            @endforeach
+            
+        </div>
+        <div class="row mt-3">
+            <a href="{{ route('agenda') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Pengumuman</a>
         </div>
     </div>
 </section>
