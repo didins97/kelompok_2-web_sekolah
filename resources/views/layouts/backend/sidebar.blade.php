@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="/" class="brand-link">
-    <img src="{{ asset('img/icons') }}/laravel.jpg" alt="laravel Logo" class="brand-image img-circle elevation-3"
+    <img src="{{ asset('img/icons') }}/logo_pendidikan.png" alt="laravel Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8">
     <span class="brand-text font-weight-light">Laraschool</span>
   </a>
@@ -12,7 +12,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="{{ asset('img/icons') }}/codeigniter4.png" class="img-circle elevation-2" alt="User Image">
+        <img src="{{ asset('img/icons') }}/ccc.png" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
         <a href="#" class="d-block">{{ auth()->user()->name }}</a>
@@ -68,6 +68,14 @@
             <i class="nav-icon fas fa-list"></i>
             <p>
               Agenda
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.info.index') }}" class="nav-link {{ Request::segment(2) == 'agenda' ? 'active' : '' }}">
+            <i class="nav-icon fas fa-list"></i>
+            <p>
+              Info
             </p>
           </a>
         </li>
