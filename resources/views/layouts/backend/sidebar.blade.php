@@ -31,12 +31,36 @@
           </a>
         </li>
         <li class="nav-header">MANAGE DATA</li>
-        @if (Auth::user()->level == 'admin')
+        @if (Auth::user()->role == 'admin')
         <li class="nav-item">
           <a href="{{ route('admin.users.index') }}" class="nav-link {{ Request::segment(2) == 'users' ? 'active' : '' }}">
             <i class="nav-icon fas fa-users"></i>
             <p>
               Users
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.kategori-artikel.index') }}" class="nav-link {{ Request::segment(2) == 'kategori-artikel' ? 'active' : '' }}">
+            <i class="nav-icon far fa-circle"></i>
+            <p>
+              Kategori Artikel
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.artikel.index') }}" class="nav-link {{ Request::segment(2) == 'artikel' ? 'active' : '' }}">
+            <i class="nav-icon far fa-image"></i>
+            <p>
+              Artikel
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.agenda.index') }}" class="nav-link {{ Request::segment(2) == 'agenda' ? 'active' : '' }}">
+            <i class="nav-icon fas fa-bookmark"></i>
+            <p>
+              Agenda
             </p>
           </a>
         </li>
