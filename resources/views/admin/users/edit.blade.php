@@ -28,6 +28,13 @@
 						<small class="text-secondary">Kosongkan kolom password jika tidak ingin mengubah password</small>
 					</div>
 					<div class="form-group">
+						<label for="exampleFormControlSelect1">Role</label>
+						<select class="form-control" name="role" id="exampleFormControlSelect1">
+						  <option value="admin">Admin</option>
+						  <option value="User">User</option>
+						</select>
+					  </div>
+					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-sm">UPDATE</button>
 					</div>
 				</form>

@@ -21,6 +21,7 @@
 				  <th>No</th>
 				  <th>Name</th>
 				  <th>Email</th>
+				  <th>Rule</th>
 				  <th>Action</th>
 				</tr>
 				</thead>
@@ -34,6 +35,13 @@
 				  <td>{{ $no++ }}</td>
 				  <td>{{ $user->name }}</td>
 				  <td>{{ $user->email }}</td>
+				  <td>
+					  @if ($user->role == "admin")
+						  <span class="badge badge-pill badge-primary">{{$user->role}}</span>
+						  @else
+						  <span class="badge badge-pill badge-secondary">{{$user->role}}</span>
+					  @endif
+				  </td>
 				  <td>
 				  	<div class="row ml-2">
 				  		<a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit fa-fw"></i></a>

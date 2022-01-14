@@ -63,6 +63,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth'
 		Route::resource('users','UsersController');
 		Route::resource('pengumuman','PengumumanController');
 		Route::resource('agenda','AgendaController');
+		Route::resource('info','InfoController');
 		Route::resource('artikel','ArtikelController');
 		Route::resource('kategori-artikel','KategoriArtikelController');
 	});
