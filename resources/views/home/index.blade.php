@@ -155,7 +155,7 @@
             
         </div>
         <div class="row mt-3">
-            <a href="{{ route('agenda') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Pengumuman</a>
+            <a href="{{ route('agenda') }}" class="alert alert-success alert-link mx-auto">Lihat Semua Agenda</a>
         </div>
     </div>
 </section>

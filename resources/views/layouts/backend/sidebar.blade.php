@@ -65,14 +65,14 @@
         </li>
         <li class="nav-item">
           <a href="{{ route('admin.agenda.index') }}" class="nav-link {{ Request::segment(2) == 'agenda' ? 'active' : '' }}">
-            <i class="nav-icon fas fa-list"></i>
+            <i class="nav-icon fas fa-bookmark"></i>
             <p>
               Agenda
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('admin.info.index') }}" class="nav-link {{ Request::segment(2) == 'agenda' ? 'active' : '' }}">
+          <a href="{{ route('admin.info.index') }}" class="nav-link {{ Request::segment(2) == 'info' ? 'active' : '' }}">
             <i class="nav-icon fas fa-list"></i>
             <p>
               Info
