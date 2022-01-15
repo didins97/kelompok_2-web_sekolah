@@ -1,6 +1,6 @@
 @extends('layouts.backend.app',[
-    'title' => 'Tambah Agenda',
-    'contentTitle' => 'Tambah Agenda'
+    'title' => 'Tambah Info',
+    'contentTitle' => 'Tambah Info'
 ])
 
 @push('css')
@@ -11,29 +11,18 @@
 <div class="">    
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('admin.agenda.index') }}" class="btn btn-success btn-sm">Kembali</a>
+            <a href="" class="btn btn-success btn-sm">Kembali</a>
         </div>
         <div class="card-body">
-        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.agenda.store') }}">
+        <form method="POST" enctype="multipart/form-data" action="">
             @csrf
             <div class="form-group">
-                <label for="judul">Judul</label>
-                <input required="" type="" name="judul" id="judul" placeholder="" class="form-control title"> 
+                <label for="judul">Email</label>
+                <input required="" type="" name="email" id="judul" placeholder="" class="form-control title"> 
             </div>
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="tgl_mulai">Tanggal Mulai</label>
-                        <input type="date" name="tgl_mulai" id="tgl_mulai" class="form-control">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="tgl_selesai">Tanggal Selesai</label>
-                        <input type="date" name="tgl_selesai" id="tgl_selesai" class="form-control">
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="judul">No Telp</label>
+                <input required="" type="" name="no_hp" id="judul" placeholder="" class="form-control title"> 
             </div>
 
             <div class="row">
@@ -51,6 +40,10 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label for="deskripsi">Alamat</label>
+                <textarea required="" name="alamat" id="deskripsi" class="text-dark form-control summernote"></textarea>
+            </div>
             <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
                 <textarea required="" name="deskripsi" id="deskripsi" class="text-dark form-control summernote"></textarea>

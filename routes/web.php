@@ -50,6 +50,7 @@ Route::get('/agenda',[AgendaController::class,'index'])->name('agenda');
 
 // pesan contact
 Route::post('/send',[ContactController::class,'create'])->name('contact.email');
+// Route::get('/view',[ContactController::class,'index'])->name('contact.index');
 
 //Admin
 Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth']],function(){

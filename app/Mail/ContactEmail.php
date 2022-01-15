@@ -31,12 +31,12 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(auth()->user()->email)
+        return $this->from(auth()->user()->email, auth()->user()->name)
                     ->markdown('emails.pesan')
                     ->with([
                         'nama'          => $this->pesan->nama,
                         'isi'           => $this->pesan->pesan,
-                        'pengirim'      => auth()->user(),
+                        'pengirim'      => auth()->user()->name,
                         'website'       => 'websekolah'
                     ]);
     }

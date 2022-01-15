@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ArtikelRequest as Request;
 
 use App\Models\Artikel;
+use App\Models\Info;
 
 class ArtikelController extends Controller
 {
     public function index()
     {
+        $contact = Info::first();
     	$artikel = Artikel::with(['user','kategoriArtikel'])->latest()->paginate(4);
-    	return view('artikel.index',compact('artikel'));
+    	return view('artikel.index',compact('artikel', 'contact'));
     }
 
     public function show(Artikel $artikel)

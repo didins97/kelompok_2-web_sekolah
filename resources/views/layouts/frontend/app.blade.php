@@ -32,8 +32,8 @@
         <div class="top-header-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +1 123 321 456 654</a>
-                <a href="#"><span>Email:</span> sekolahonline@example.com</a>
+                <a href="#"><span>Phone:</span> {{$contact->no_telp}}</a>
+                <a href="#"><span>Email:</span> {{ $contact->email}}</a>
             </div>
             <!-- Follow Us -->
             <div class="follow-us">

@@ -4,7 +4,7 @@
   <a href="/" class="brand-link">
     <img src="{{ asset('img/icons') }}/logo_pendidikan.png" alt="laravel Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8">
-    <span class="brand-text font-weight-light">Laraschool</span>
+    <span class="brand-text font-weight-light">Sekolah Online</span>
   </a>
 
   <!-- Sidebar -->
@@ -80,7 +80,6 @@
             </p>
           </a>
         </li>
-        @elseif(Auth::user()->role =="admin" || Auth::user()->role == "user")
         <li class="nav-item">
           <a href="{{ route('admin.kategori-artikel.index') }}" class="nav-link {{ Request::segment(2) == 'kategori-artikel' ? 'active' : '' }}">
             <i class="nav-icon far fa-circle"></i>
@@ -89,6 +88,7 @@
             </p>
           </a>
         </li>
+        @elseif(Auth::user()->role =="admin" || Auth::user()->role == "user")
         <li class="nav-item">
           <a href="{{ route('admin.artikel.index') }}" class="nav-link {{ Request::segment(2) == 'artikel' ? 'active' : '' }}">
             <i class="nav-icon far fa-image"></i>

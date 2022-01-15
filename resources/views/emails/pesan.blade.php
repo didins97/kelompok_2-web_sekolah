@@ -1,12 +1,8 @@
 @component('mail::message')
-# Introduction
+# Pesan dari pengguna {{$pengirim}}
 
-The body of your message.
-
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+{{ $isi }}
 
 Thanks,<br>
-{{ config('app.name') }}
+{{ $website }}
 @endcomponent

@@ -42,13 +42,7 @@
                     <td>{{ $in->jam_selesai }}</td>
                     <td>
                       <div class="row ml-2">
-                        <a href="" class="btn btn-primary btn-sm"><i class="fas fa-edit fa-fw"></i></a>
-
-                        <form method="POST" action="">
-                            @csrf
-                            @method('DELETE')
-                            <button onclick="return confirm('Yakin hapus ?')" type="submit" class="btn btn-danger btn-sm ml-2"><i class="fas fa-trash fa-fw"></i></button>
-                        </form>
+                        <a href="{{ route('admin.info.edit', $in->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit fa-fw"></i></a>
                     </div>
                     </td>
                   </tr>

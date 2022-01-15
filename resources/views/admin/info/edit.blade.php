@@ -1,6 +1,6 @@
 @extends('layouts.backend.app',[
-    'title' => 'Edit Agenda',
-    'contentTitle' => 'Edit Agenda'
+    'title' => 'Edit info',
+    'contentTitle' => 'Edit info'
 ])
 
 @push('css')
@@ -11,50 +11,42 @@
 <div class="">    
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('admin.agenda.index') }}" class="btn btn-success btn-sm">Kembali</a>
+            <a href="" class="btn btn-success btn-sm">Kembali</a>
         </div>
         <div class="card-body">
-        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.agenda.update',$agenda->id) }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.info.update', $info->id) }}">
             @csrf
             @method('PATCH')
             <div class="form-group">
-                <label for="judul">Judul</label>
-                <input required="" value="{{ $agenda->judul }}" required="" type="" name="judul" id="judul" placeholder="" class="form-control title"> 
+                <label for="judul">Email</label>
+                <input required="" value="{{ $info->email }}" required="" type="" name="email" id="judul" placeholder="" class="form-control title"> 
             </div>
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="tgl_mulai">Tanggal Mulai</label>
-                        <input required="" value="{{ $agenda->tgl_mulai }}" type="date" name="tgl_mulai" id="tgl_mulai" class="form-control">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="tgl_selesai">Tanggal Selesai</label>
-                        <input required="" value="{{ $agenda->tgl_selesai }}" type="date" name="tgl_selesai" id="tgl_selesai" class="form-control">
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="judul">No Telepon</label>
+                <input required="" value="{{ $info->no_telp }}" required="" type="" name="no_telp" id="judul" placeholder="" class="form-control title"> 
             </div>
-
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="jam_mulai">Jam Mulai</label>
-                        <input required="" value="{{ $agenda->jam_mulai }}" type="time" name="jam_mulai" id="jam_mulai" class="form-control">
+                        <input required="" value="{{ $info->jam_mulai }}" type="time" name="jam_mulai" id="jam_mulai" class="form-control">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="jam_selesai">Jam Selesai</label>
-                        <input required="" value="{{ $agenda->jam_selesai }}" type="time" name="jam_selesai" id="jam_selesai" class="form-control">
+                        <input required="" value="{{ $info->jam_selesai }}" type="time" name="jam_selesai" id="jam_selesai" class="form-control">
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
+                <label for="deskripsi">Alamat</label>
+                <textarea required="" name="alamat" id="deskripsi" class="text-dark form-control">{!! $info->alamat !!}</textarea>
+            </div>
+            <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
-                <textarea required="" name="deskripsi" id="deskripsi" class="text-dark form-control summernote">{!! $agenda->deskripsi !!}</textarea>
+                <textarea required="" name="deskripsi" id="deskripsi" class="text-dark form-control summernote">{!! $info->deskripsi !!}</textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-sm">UPDATE</button>    

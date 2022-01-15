@@ -26,7 +26,7 @@ class InfoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.info.create');
     }
 
     /**
@@ -37,7 +37,8 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Info::create($request->all());
+        return redirect()->route('admin.info.index')->with('success','Data berhasil ditambah');
     }
 
     /**
@@ -59,7 +60,8 @@ class InfoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $info = Info::find($id);
+        return view('admin.info.edit', compact('info'));
     }
 
     /**
@@ -71,7 +73,9 @@ class InfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $info = Info::find($id);
+        $info->update($request->all());
+        return redirect()->route('admin.info.index')->with('success','Data berhasil diupdate');
     }
 
     /**
