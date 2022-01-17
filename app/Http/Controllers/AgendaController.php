@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Agenda;
+use App\Models\Artikel;
 use App\Models\Info;
 use Illuminate\Http\Request;
 
@@ -15,10 +16,11 @@ class AgendaController extends Controller
     	return view('agenda.index',compact('agenda', 'contact'));
     }
 
-    // public function show(Artikel $artikel)
-    // {
-    // 	return view('artikel.show',compact('artikel'));
-    // }
+    public function show(Agenda $agenda)
+    {
+        $contact = Info::first();
+    	return view('agenda.show',compact('agenda', 'contact'));
+    }
 
     // public function search(Request $request)
     // {	

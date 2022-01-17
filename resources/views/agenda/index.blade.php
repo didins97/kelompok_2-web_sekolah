@@ -25,7 +25,7 @@
                         <h4 class="event-title">{{ $agn->judul }}</h4>
                     </div>
                     <div>
-                        <a href="" class="btn btn-primary col-lg">Detail</a>
+                        <a href="{{ route('agenda.show', $agn->slug) }}" class="btn btn-primary col-lg">Detail</a>
                     </div>
                 </div>
             </div>

@@ -41,6 +41,14 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="{{ route('admin.banner.index') }}" class="nav-link {{ Request::segment(2) == 'banner' ? 'active' : '' }}">
+            <i class="nav-icon far fa-clone"></i>
+            <p>
+              Banner
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="{{ route('admin.kategori-artikel.index') }}" class="nav-link {{ Request::segment(2) == 'kategori-artikel' ? 'active' : '' }}">
             <i class="nav-icon far fa-circle"></i>
             <p>
@@ -77,14 +85,6 @@
             <i class="nav-icon fas fa-list"></i>
             <p>
               Info
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('admin.kategori-artikel.index') }}" class="nav-link {{ Request::segment(2) == 'kategori-artikel' ? 'active' : '' }}">
-            <i class="nav-icon far fa-circle"></i>
-            <p>
-              Kategori Artikel
             </p>
           </a>
         </li>

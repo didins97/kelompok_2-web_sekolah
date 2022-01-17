@@ -18,16 +18,18 @@ class ArtikelController extends Controller
 
     public function show(Artikel $artikel)
     {
-    	return view('artikel.show',compact('artikel'));
+        $contact = Info::first();
+    	return view('artikel.show',compact('artikel', 'contact'));
     }
 
     public function search(Request $request)
     {	
+        $contact = Info::first();
     	$artikel = Artikel::with(['user','kategoriArtikel'])->where(function($query) use ($request){
     		$query->where('judul','like','%'.$request->keyword.'%')
             ->orWhere('deskripsi','like','%'.$request->keyword.'%');
     	})->paginate(4);
 
-    	return view('artikel.index',compact('artikel'));
+    	return view('artikel.index',compact('artikel', 'contact'));
     }
 }

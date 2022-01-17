@@ -18,6 +18,7 @@ class PengumumanController extends Controller
 
     public function show(Pengumuman $pengumuman)
     {
-    	return view('pengumuman.show',compact('pengumuman'));
+        $contact = Info::first();
+    	return view('pengumuman.show',compact('pengumuman', 'contact'));
     }
 }

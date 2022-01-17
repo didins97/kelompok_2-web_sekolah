@@ -67,5 +67,6 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth'
 		Route::resource('info','InfoController');
 		Route::resource('artikel','ArtikelController');
 		Route::resource('kategori-artikel','KategoriArtikelController');
+		Route::resource('banner','BannerController');
 	});
 });

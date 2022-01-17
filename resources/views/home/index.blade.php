@@ -3,14 +3,14 @@
 ])
 @section('content')
 <!-- ##### Hero Area Start ##### -->
-<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('img/bg') }}/sklh.jpg);">
+<section class="hero-area bg-img bg-overlay-2by5" style="background-image: url({{ asset('uploads/img/banner/'.$banner->img) }});">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <!-- Hero Content -->
                 <div class="hero-content text-center">
-                    <h2>Selamat Datang di Sekolah Online</h2>
-                    <a href="#" class="btn clever-btn">Sekolah Modern</a>
+                    <h2>{{$banner->judul}}</h2>
+                    <a href="#" class="btn clever-btn">{{$banner->btn_txt}}</a>
                 </div>
             </div>
         </div>
